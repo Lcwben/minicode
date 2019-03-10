@@ -1,6 +1,7 @@
 package org.chengwei.minicode;
 
-import org.chengwei.minicode.business.FizzBuzzStage1;
+import org.chengwei.minicode.business.FizzBuzzStage2;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,8 +14,15 @@ public class MinicodeApplicationStage2Test {
 	@Test
 	public void testStage2FizzBuzz() {
 
-		FizzBuzzStage1 stage1 = new FizzBuzzStage1();
-		stage1.doFizzBuzz();
+		FizzBuzzStage2 stage2 = new FizzBuzzStage2();
+
+		Assert.assertEquals("1", stage2.doFizzBuzz(1));
+		Assert.assertEquals("Fizz", stage2.doFizzBuzz(6));
+		Assert.assertEquals("FizzBuzz", stage2.doFizzBuzz(15));
+
+		Assert.assertEquals("Fizz", stage2.doFizzBuzz(3));
+		Assert.assertEquals("Buzz", stage2.doFizzBuzz(25));
+		Assert.assertEquals("FizzBuzz", stage2.doFizzBuzz(35));
 	}
 
 }
