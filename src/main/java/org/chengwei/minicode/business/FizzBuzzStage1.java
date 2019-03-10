@@ -58,12 +58,12 @@ public class FizzBuzzStage1 {
      * 判断输入字符是否能被特定的数字整除，并根据结果组装输出字符
      *
      * @param num           数到的数
-     * @param devided       被除数
+     * @param divisor       被除数
      * @return
      */
-    protected boolean isDivisibleBy(int num, int devided) {
+    protected boolean isDivisibleBy(int num, int divisor) {
 
-        if (num % devided == 0) {
+        if (num % divisor == 0) {
             return true;
         }
         return false;
